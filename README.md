@@ -59,7 +59,7 @@ git clone https://github.com/aiku-afk/Izzy-Bot.git
 Entre na pasta:
 
 ```bash
-cd Izzy-Bot
+cd izzybot
 ```
 
 Instale as dependências do bot:
