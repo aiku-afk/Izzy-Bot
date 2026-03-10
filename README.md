@@ -1,34 +1,167 @@
-# IzzyBot WhatsApp
+# Izzy-Bot
 
-Bot de WhatsApp usando Baileys.
+Bot de WhatsApp feito em Node.js usando a biblioteca Baileys.
 
-## Instalação no Termux
+O Izzy-Bot é um bot simples e rápido feito para rodar no Termux ou Linux, com suporte a vários comandos e integração com yt-dlp para download de mídias.
 
-1. Atualizar Termux
+---
 
+# Funções
+
+• Download de vídeos  
+• Download de músicas  
+• Sistema de comandos no WhatsApp  
+• Conexão via QR Code  
+• Suporte a Termux  
+• Execução com PM2  
+
+---
+
+# Requisitos
+
+Antes de instalar o bot você precisa ter:
+
+• Node.js  
+• Git  
+• FFmpeg  
+• yt-dlp  
+
+---
+
+# Instalação no Termux
+
+Atualize os pacotes:
+
+```bash
 pkg update && pkg upgrade
+```
 
-2. Instalar dependências
+Instale as dependências:
 
-pkg install nodejs ffmpeg yt-dlp git
+```bash
+pkg install nodejs git ffmpeg yt-dlp
+```
 
-3. Instalar dependências do bot
+Instale o PM2:
 
-npm install
-
-4. Rodar bot
-
-node bot.js
-
-## Rodar com PM2
-
+```bash
 npm install -g pm2
+```
 
-pm2 start bot.js
+---
 
-## Dono
+# Clonar o repositório
 
-84 9146-7507
-bot rodando: +55 41 7605-1138
-# Izzy-Bot
-# Izzy-Bot
+```bash
+git clone https://github.com/aiku-afk/Izzy-Bot.git
+```
+
+Entre na pasta:
+
+```bash
+cd Izzy-Bot
+```
+
+Instale as dependências do bot:
+
+```bash
+npm install
+```
+
+---
+
+# Iniciar o bot
+
+Execute:
+
+```bash
+node bot.js
+```
+
+Vai aparecer um QR Code no terminal.
+
+Abra o WhatsApp > Dispositivos conectados > Conectar dispositivo  
+Escaneie o QR Code.
+
+---
+
+# Rodar com PM2 (recomendado)
+
+Para deixar o bot rodando 24h:
+
+```bash
+pm2 start bot.js --name izzybot
+```
+
+Ver status:
+
+```bash
+pm2 status
+```
+
+Parar bot:
+
+```bash
+pm2 stop izzybot
+```
+
+Reiniciar:
+
+```bash
+pm2 restart izzybot
+```
+
+---
+
+# Atualizar o bot
+
+```bash
+git pull
+npm install
+pm2 restart izzybot
+```
+
+---
+
+# Importante
+
+Nunca envie sua pasta de sessão do WhatsApp para o GitHub.
+
+Crie um `.gitignore` com:
+
+```
+session
+node_modules
+```
+
+---
+
+# Dono do bot
+
+Numero do dono:
+
+```
++55 84 9146-7507
+```
+
+---
+
+# Créditos
+
+Desenvolvido por:
+
+ynokas.
+
+Bibliotecas usadas:
+
+• Baileys  
+• Node.js  
+• FFmpeg  
+• yt-dlp  
+
+---
+
+# Aviso
+
+Este projeto é apenas para fins educacionais.  
+Use por sua própria responsabilidade.
